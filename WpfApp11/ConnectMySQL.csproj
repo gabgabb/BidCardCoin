@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C73383B9-D216-4C8B-9F0D-0F75C8B2A839}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp11</RootNamespace>
+    <AssemblyName>WpfApp11</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPF.Bootstrap, Version=0.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bootstrap.Wpf.0.0.9\lib\net45\WPF.Bootstrap.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Vue\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="applicationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>applicationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\AdresseViewModel.cs" />
+    <Compile Include="Ctrl\CategorieProduitViewModel.cs" />
+    <Compile Include="Ctrl\CategorieViewModel.cs" />
+    <Compile Include="Ctrl\CommissairePriseurViewModel.cs" />
+    <Compile Include="Ctrl\EnchereViewModel.cs" />
+    <Compile Include="Ctrl\EstimationViewModel.cs" />
+    <Compile Include="Ctrl\EvenementVenteViewModel.cs" />
+    <Compile Include="Ctrl\LotViewModel.cs" />
+    <Compile Include="Ctrl\OrdreAchatViewModel.cs" />
+    <Compile Include="Ctrl\PhotoViewModel.cs" />
+    <Compile Include="Ctrl\ProduitVenteViewModel.cs" />
+    <Compile Include="Ctrl\ProduitViewModel.cs" />
+    <Compile Include="Ctrl\StockageViewModel.cs" />
+    <Compile Include="Ctrl\UtilisateurViewModel.cs" />
+    <Compile Include="DAL\AdresseDAL.cs" />
+    <Compile Include="DAL\CategorieDAL.cs" />
+    <Compile Include="DAL\CategorieProduitDAL.cs" />
+    <Compile Include="DAL\CommissairePriseurDAL.cs" />
+    <Compile Include="DAL\EnchereDAL.cs" />
+    <Compile Include="DAL\EstimationDAL.cs" />
+    <Compile Include="DAL\EvenementVenteDAL.cs" />
+    <Compile Include="DAL\LotDAL.cs" />
+    <Compile Include="DAL\OrdreAchatDAL.cs" />
+    <Compile Include="DAL\PhotoDAL.cs" />
+    <Compile Include="DAL\ProduitDAL.cs" />
+    <Compile Include="DAL\ProduitVenteDAL.cs" />
+    <Compile Include="DAL\StockageDAL.cs" />
+    <Compile Include="DAL\UtilisateurDAL.cs" />
+    <Compile Include="DAO\AdresseDAO.cs" />
+    <Compile Include="DAO\CategorieDAO.cs" />
+    <Compile Include="DAO\CategorieProduitDAO.cs" />
+    <Compile Include="DAO\CommissairePriseurDAO.cs" />
+    <Compile Include="DAO\EnchereDAO.cs" />
+    <Compile Include="DAO\EstimationDAO.cs" />
+    <Compile Include="DAO\EvenementVenteDAO.cs" />
+    <Compile Include="DAO\LotDAO.cs" />
+    <Compile Include="DAO\OrdreAchatDAO.cs" />
+    <Compile Include="DAO\PhotoDAO.cs" />
+    <Compile Include="DAO\ProduitDAO.cs" />
+    <Compile Include="DAO\ProduitVenteDAO.cs" />
+    <Compile Include="DAO\StockageDAO.cs" />
+    <Compile Include="DAO\UtilisateurDAO.cs" />
+    <Compile Include="ORM\AdresseORM.cs" />
+    <Compile Include="ORM\CategorieORM.cs" />
+    <Compile Include="ORM\CommissairePriseurORM.cs" />
+    <Compile Include="ORM\EnchereORM.cs" />
+    <Compile Include="ORM\EstimationORM.cs" />
+    <Compile Include="ORM\EvenementVenteORM.cs" />
+    <Compile Include="ORM\LotORM.cs" />
+    <Compile Include="DAO\PersonneDAO.cs" />
+    <Compile Include="ORM\OrdreAchatORM.cs" />
+    <Compile Include="ORM\PersonneORM.cs" />
+    <Compile Include="DAL\DALConnection.cs" />
+    <Compile Include="DAL\PersonneDAL.cs" />
+    <Compile Include="Ctrl\PersonneViewModel.cs" />
+    <Compile Include="ORM\PhotoORM.cs" />
+    <Compile Include="ORM\ProduitORM.cs" />
+    <Compile Include="ORM\StockageORM.cs" />
+    <Compile Include="ORM\UtilisateurORM.cs" />
+    <Compile Include="Vue\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="applicationDataSet.xsc">
+      <DependentUpon>applicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="applicationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>applicationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="applicationDataSet.xss">
+      <DependentUpon>applicationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

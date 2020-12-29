@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WpfApp11",
+    "\\WpfApp11\\Ctrl",
+    "\\WpfApp11\\DAL",
+    "\\WpfApp11\\DAO",
+    "\\WpfApp11\\obj",
+    "\\WpfApp11\\ORM",
+    "\\WpfApp11\\Vue"
+  ],
+  "SelectedNode": "\\WpfApp11\\Ctrl\\PersonneViewModel.cs",
+  "PreviewInSolutionExplorer": false
+}

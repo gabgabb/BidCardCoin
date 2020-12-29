@@ -1,0 +1,37 @@
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\bin\Debug\WpfApp11.exe.config
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\bin\Debug\WpfApp11.exe
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\bin\Debug\WpfApp11.pdb
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\bin\Debug\MySql.Data.dll
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\bin\Debug\Google.Protobuf.dll
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\bin\Debug\MySql.Data.xml
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\ConnectMySQL.csprojAssemblyReference.cache
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\App.g.cs
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\WpfApp11_MarkupCompile.cache
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\WpfApp11_MarkupCompile.lref
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\WpfApp11.g.resources
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\WpfApp11.Properties.Resources.resources
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\ConnectMySQL.csproj.GenerateResource.cache
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\ConnectMySQL.csproj.CoreCompileInputs.cache
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\ConnectMySQL.csproj.CopyComplete
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\WpfApp11.exe
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\WpfApp11.pdb
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\Vue\MainWindow.g.cs
+C:\Users\mathias.braux1\source\repos\WpfApp11\WpfApp11\obj\Debug\Vue\MainWindow.baml
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\bin\Debug\WpfApp11.exe.config
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\bin\Debug\WpfApp11.exe
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\bin\Debug\WpfApp11.pdb
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\bin\Debug\Google.Protobuf.dll
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\bin\Debug\MySql.Data.xml
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\ConnectMySQL.csprojAssemblyReference.cache
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\Vue\MainWindow.g.cs
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\App.g.cs
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\WpfApp11_MarkupCompile.cache
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\Vue\MainWindow.baml
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\WpfApp11.g.resources
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\WpfApp11.Properties.Resources.resources
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\ConnectMySQL.csproj.GenerateResource.cache
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\ConnectMySQL.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\ConnectMySQL.csproj.CopyComplete
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\WpfApp11.exe
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\obj\Debug\WpfApp11.pdb
+C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11\bin\Debug\WPF.Bootstrap.dll

@@ -1,0 +1,319 @@
+﻿<Window
+    x:Class="WpfApp11.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Administration"
+    Width="784.277"
+    Height="592.596"
+    WindowState="Normal"
+    mc:Ignorable="d">
+
+
+    <DockPanel>
+
+
+        <StackPanel>
+            <TabControl Name="Tab" SelectionChanged="TabControlOnglet_SelectionChanged">
+                <TabItem
+                    Height="22"
+                    VerticalAlignment="Top"
+                    Header="Utilisateur">
+                    <TabControl
+                        Name="OngletsUtilisateur"
+                        Height="410"
+                        Margin="0,0,11,0"
+                        SelectionChanged="TabControlOnglet_SelectionChanged">
+                        <TabItem Header="Base de données utilisateur">
+                            <StackPanel Height="450">
+                                <Button
+                                    x:Name="supprimerButton"
+                                    Width="139"
+                                    Height="22"
+                                    Margin="0,5,595,0"
+                                    HorizontalAlignment="Right"
+                                    Content="Supprimer"
+                                    MouseDoubleClick="supprimerButton_MouseDoubleClick" />
+                                <Grid Height="191">
+
+                                    <DataGrid
+                                        x:Name="listeUtilisateur"
+                                        Height="311"
+                                        Margin="10,10,20,-130"
+                                        VerticalAlignment="Top"
+                                        AutoGenerateColumns="false"
+                                        Background="#FFA4A4A4"
+                                        BorderBrush="Black"
+                                        ScrollViewer.CanContentScroll="True"
+                                        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                        ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                        SelectionChanged="listeUtilisateur_SelectionChanged">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Binding="{Binding idPersonneUtilisateurProperty, Mode=TwoWay}" Header="id " />
+                                            <DataGridTextColumn Binding="{Binding nomPersonneProperty, Mode=TwoWay}" Header="nom" />
+                                            <DataGridTextColumn Binding="{Binding prenomPersonneProperty, Mode=TwoWay}" Header="prénom" />
+                                            <DataGridTextColumn Binding="{Binding DateNaisPersonneProperty, Mode=twoWay, StringFormat=\{0:dd/MM/yyyy\}}" Header="date naissance" />
+                                            <DataGridTextColumn Binding="{Binding emailProperty, Mode=TwoWay}" Header="email" />
+                                            <DataGridTextColumn Binding="{Binding telephoneProperty, Mode=TwoWay}" Header="téléphone" />
+                                            <DataGridTextColumn Binding="{Binding passwordProperty, Mode=TwoWay}" Header="password" />
+                                            <DataGridTextColumn Binding="{Binding estFrancaisProperty, Mode=TwoWay}" Header="francais ?" />
+                                            <DataGridTextColumn Binding="{Binding verifSolvableProperty, Mode=TwoWay}" Header="est solvable ?" />
+                                            <DataGridTextColumn Binding="{Binding verifIdProperty, Mode=TwoWay}" Header="identité vérifié?" />
+                                            <DataGridTextColumn Binding="{Binding _ModePaiementDAOProperty, Mode=TwoWay}" Header="mode de paiement" />
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+
+                                </Grid>
+                            </StackPanel>
+                        </TabItem>
+
+                        <TabItem Header="Ajouter un utilisateur">
+                            <Grid
+                                Name="GridUser"
+                                Height="500"
+                                Margin="0,0,0.300,0"
+                                VerticalAlignment="Top"
+                                ScrollViewer.CanContentScroll="True"
+                                ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+                                <StackPanel Margin="0,0,590.7,0">
+                                    <Label Margin="0,0,101,0" Content="Nom :" />
+                                    <Label Margin="0,0,93,0" Content="Prénom :" />
+                                    <Label Margin="0,0,93,0" Content="Age : " />
+                                    <Label Margin="0,0,53,0" Content="Email : " />
+                                    <Label Margin="0,0,78,0" Content="Téléphone :" />
+                                    <Label Margin="0,0,93,0" Content="Français ?" />
+                                    <Label Margin="0,0,78,0" Content="password" />
+                                    <Label Margin="0,0,78,0" Content="est solvable ?" />
+                                    <Label
+                                        Height="28"
+                                        Margin="0,0,78,0"
+                                        Content="identité ? " />
+                                    <Label Margin="0,0,1,0" Content="méthode de paiement ?" />
+                                </StackPanel>
+                                <StackPanel Margin="156,0,-0.3,0">
+                                    <TextBox
+                                        x:Name="nomTextBox"
+                                        Height="20"
+                                        Margin="25,2,491,5"
+                                        Text="{Binding nomPersonneProperty, Mode=TwoWay}"
+                                        TextChanged="NomChanged" />
+                                    <TextBox
+                                        x:Name="prenomTextBox"
+                                        Height="20"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding prenomPersonneProperty, Mode=TwoWay}"
+                                        TextChanged="PrenomChanged" />
+                                    <TextBox
+                                        x:Name="txtAge"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding AgeProperty, Mode=TwoWay}"
+                                        TextChanged="AgeChanged" />
+                                    <TextBox
+                                        x:Name="txtEmail"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding emailProperty, Mode=TwoWay}"
+                                        TextChanged="EmailChanged" />
+                                    <TextBox
+                                        x:Name="txtTel"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding telephoneProperty, Mode=TwoWay}"
+                                        TextChanged="TelephoneChanged" />
+                                    <TextBox
+                                        x:Name="boolFr"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding estFrancaisProperty, Mode=TwoWay}"
+                                        TextChanged="EstFrancaisChanged" />
+                                    <TextBox
+                                        x:Name="txtPassword"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding passwordProperty, Mode=TwoWay}"
+                                        TextChanged="PasswordChanged" />
+                                    <TextBox
+                                        x:Name="solvableBool"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding verifSolvableProperty, Mode=TwoWay}"
+                                        TextChanged="EstSolvableChanged" />
+                                    <TextBox
+                                        x:Name="idBool"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding verifIdProperty, Mode=TwoWay}"
+                                        TextChanged="VerifIdChanged" />
+                                    <TextBox
+                                        x:Name="methoTxt"
+                                        Margin="25,3,491,5"
+                                        Text="{Binding _ModePaiementDAOProperty, Mode=TwoWay}"
+                                        TextChanged="MethodePaiementChanged" />
+                                    <Button
+                                        x:Name="AjouterBoutonUtilisateur"
+                                        Height="24"
+                                        Margin="25,5,427,0"
+                                        Click="UtilisateurButton_Click"
+                                        Content="Ajouter un utilisateur"
+                                        MouseDoubleClick="nomPrenomButton_MouseDoubleClick" />
+
+                                </StackPanel>
+                            </Grid>
+                        </TabItem>
+
+                    </TabControl>
+                </TabItem>
+
+                <TabItem Header="Commissaire Priseur">
+                    <TabControl
+                        Name="OngletsCp"
+                        Height="410"
+                        Margin="0,0,11,0"
+                        SelectionChanged="TabControlOnglet_SelectionChanged">
+                        <TabItem Header="Base de données commissaire priseur">
+                            <StackPanel Margin="0,0,-2,0">
+                                <Button
+                                    x:Name="supprimerButtonCp"
+                                    Width="140"
+                                    Height="22"
+                                    Margin="0,5,596,0"
+                                    HorizontalAlignment="Right"
+                                    Content="Supprimer"
+                                    MouseDoubleClick="supprimerButton_MouseDoubleClick" />
+                                <Grid>
+                                    <DataGrid
+                                        Name="listeCPs"
+                                        Margin="10,10,20,-329"
+                                        AutoGenerateColumns="false"
+                                        Background="#FFA4A4A4"
+                                        BorderBrush="Black"
+                                        ScrollViewer.CanContentScroll="True"
+                                        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                        ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                        SelectionChanged="listeUtilisateur_SelectionChanged">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Binding="{Binding idPersonneCpProperty, Mode=TwoWay}" Header="id " />
+                                            <DataGridTextColumn Binding="{Binding nomPersonneProperty, Mode=TwoWay}" Header="nom" />
+                                            <DataGridTextColumn Binding="{Binding prenomPersonneProperty, Mode=TwoWay}" Header="prénom" />
+                                            <DataGridTextColumn Binding="{Binding DateNaisPersonneProperty, StringFormat={}{0:dd/MM/yyyy}, Mode=twoWay}" Header="date Naissance" />
+                                            <DataGridTextColumn Binding="{Binding emailProperty, Mode=TwoWay}" Header="email" />
+                                            <DataGridTextColumn Binding="{Binding telephoneProperty, Mode=TwoWay}" Header="téléphone" />
+                                            <DataGridTextColumn Binding="{Binding passwordProperty, Mode=TwoWay}" Header="password" />
+                                            <DataGridTextColumn Binding="{Binding verifIdProperty, Mode=TwoWay}" Header="id valide ?" />
+                                            <DataGridTextColumn Binding="{Binding estVolontaireProperty, Mode=TwoWay}" Header="est volontaire ?" />
+                                            <DataGridTextColumn Binding="{Binding formationProperty, Mode=TwoWay}" Header="formation" />
+                                            <DataGridTextColumn Binding="{Binding verifFormationProperty, Mode=TwoWay}" Header="formation valide ?" />
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Grid>
+
+                            </StackPanel>
+
+
+
+
+                        </TabItem>
+
+                        <TabItem Header="Ajouter un commissaire priseur">
+                            <Grid
+                                Name="GridCp"
+                                Height="500"
+                                Margin="0,0,0.300,0"
+                                VerticalAlignment="Top"
+                                ScrollViewer.CanContentScroll="True"
+                                ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                <StackPanel Margin="0,0,641.7,0">
+                                    <Label Height="30" Content="Nom :" />
+                                    <Label Content="Prénom :" />
+                                    <Label Height="30" Content="Age : " />
+                                    <Label Height="30" Content="Email : " />
+                                    <Label Content="Password : " />
+                                    <Label Content="Téléphone :" />
+                                    <Label Height="29" Content="Id valide ?" />
+                                    <Label Height="29" Content="Volontaire ?" />
+                                    <Label Height="29" Content="Formation" />
+                                    <Label Content="Formation validé ?" />
+
+                                </StackPanel>
+                                <StackPanel Margin="116,0,-0.3,0">
+                                    <TextBox
+                                        Name="nomTextBoxCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding nomPersonneProperty, Mode=TwoWay}"
+                                        TextChanged="NomChanged" />
+                                    <TextBox
+                                        Name="prenomTextBoxCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding prenomPersonneProperty, Mode=TwoWay}"
+                                        TextChanged="PrenomChanged" />
+                                    <TextBox
+                                        Name="txtAgeCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding AgeProperty, Mode=TwoWay}"
+                                        TextChanged="AgeChanged" />
+                                    <TextBox
+                                        Name="txtEmailCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding emailProperty, Mode=TwoWay}"
+                                        TextChanged="EmailChanged" />
+                                    <TextBox
+                                        x:Name="txtPasswordCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding passwordProperty, Mode=TwoWay}"
+                                        TextChanged="PasswordChanged" />
+                                    <TextBox
+                                        x:Name="txtTelCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding telephoneProperty, Mode=TwoWay}"
+                                        TextChanged="TelephoneChanged" />
+                                    <TextBox
+                                        Name="idBoolCp"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding passwordProperty, Mode=TwoWay}"
+                                        TextChanged="VerifIdChanged" />
+                                    <TextBox
+                                        Name="volbool"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding estVolontaireProperty, Mode=TwoWay}"
+                                        TextChanged="EstVolontaireChanged" />
+                                    <TextBox
+                                        Name="formationTxt"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding formationProperty, Mode=TwoWay}"
+                                        TextChanged="FormationChanged" />
+                                    <TextBox
+                                        Name="verifbool"
+                                        Height="20"
+                                        Margin="25,3,525,5"
+                                        Text="{Binding verifFormationProperty, Mode=TwoWay}"
+                                        TextChanged="VerifFormationChanged" />
+                                    <Button
+                                        x:Name="AjouterBoutonCp"
+                                        Width="197"
+                                        Height="22"
+                                        Margin="25,3,0,5"
+                                        HorizontalAlignment="Left"
+                                        Click="CpButton_Click"
+                                        Content="Ajouter un commissaire priseur"
+                                        MouseDoubleClick="nomPrenomButton_MouseDoubleClick"
+                                        RenderTransformOrigin="0.5,2.31" />
+                                </StackPanel>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </TabItem>
+
+
+
+            </TabControl>
+        </StackPanel>
+    </DockPanel>
+
+</Window>

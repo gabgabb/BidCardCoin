@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Gabriel\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Gabriel\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Gabriel\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Gabriel\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Gabriel\Documents\EPSI\Cours\WPF\Application modele B2\WpfApp11" t="IncludeRecursive">
+      <e p="App.config" t="Include" />
+      <e p="App.xaml" t="Include" />
+      <e p="App.xaml.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="ConnectMySQL.csproj" t="IncludeRecursive" />
+      <e p="Ctrl" t="Include">
+        <e p="AdresseViewModel.cs" t="Include" />
+        <e p="CategorieProduitViewModel.cs" t="Include" />
+        <e p="CategorieViewModel.cs" t="Include" />
+        <e p="CommissairePriseurViewModel.cs" t="Include" />
+        <e p="EnchereViewModel.cs" t="Include" />
+        <e p="EstimationViewModel.cs" t="Include" />
+        <e p="EvenementVenteViewModel.cs" t="Include" />
+        <e p="LotViewModel.cs" t="Include" />
+        <e p="OrdreAchatViewModel.cs" t="Include" />
+        <e p="PersonneViewModel.cs" t="Include" />
+        <e p="PhotoViewModel.cs" t="Include" />
+        <e p="ProduitVenteViewModel.cs" t="Include" />
+        <e p="ProduitViewModel.cs" t="Include" />
+        <e p="StockageViewModel.cs" t="Include" />
+        <e p="UtilisateurViewModel.cs" t="Include" />
+      </e>
+      <e p="DAL" t="Include">
+        <e p="AdresseDAL.cs" t="Include" />
+        <e p="CategorieDAL.cs" t="Include" />
+        <e p="CategorieProduitDAL.cs" t="Include" />
+        <e p="CommissairePriseurDAL.cs" t="Include" />
+        <e p="DALConnection.cs" t="Include" />
+        <e p="EnchereDAL.cs" t="Include" />
+        <e p="EstimationDAL.cs" t="Include" />
+        <e p="EvenementVenteDAL.cs" t="Include" />
+        <e p="LotDAL.cs" t="Include" />
+        <e p="OrdreAchatDAL.cs" t="Include" />
+        <e p="PersonneDAL.cs" t="Include" />
+        <e p="PhotoDAL.cs" t="Include" />
+        <e p="ProduitDAL.cs" t="Include" />
+        <e p="ProduitVenteDAL.cs" t="Include" />
+        <e p="StockageDAL.cs" t="Include" />
+        <e p="UtilisateurDAL.cs" t="Include" />
+      </e>
+      <e p="DAO" t="Include">
+        <e p="AdresseDAO.cs" t="Include" />
+        <e p="CategorieDAO.cs" t="Include" />
+        <e p="CategorieProduitDAO.cs" t="Include" />
+        <e p="CommissairePriseurDAO.cs" t="Include" />
+        <e p="EnchereDAO.cs" t="Include" />
+        <e p="EstimationDAO.cs" t="Include" />
+        <e p="EvenementVenteDAO.cs" t="Include" />
+        <e p="LotDAO.cs" t="Include" />
+        <e p="OrdreAchatDAO.cs" t="Include" />
+        <e p="PersonneDAO.cs" t="Include" />
+        <e p="PhotoDAO.cs" t="Include" />
+        <e p="ProduitDAO.cs" t="Include" />
+        <e p="ProduitVenteDAO.cs" t="Include" />
+        <e p="StockageDAO.cs" t="Include" />
+        <e p="UtilisateurDAO.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="App.g.cs" t="Include" />
+          <e p="Vue" t="Include">
+            <e p="MainWindow.g.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="ORM" t="Include">
+        <e p="AdresseORM.cs" t="Include" />
+        <e p="CategorieORM.cs" t="Include" />
+        <e p="CommissairePriseurORM.cs" t="Include" />
+        <e p="EnchereORM.cs" t="Include" />
+        <e p="EstimationORM.cs" t="Include" />
+        <e p="EvenementVenteORM.cs" t="Include" />
+        <e p="LotORM.cs" t="Include" />
+        <e p="OrdreAchatORM.cs" t="Include" />
+        <e p="PersonneORM.cs" t="Include" />
+        <e p="PhotoORM.cs" t="Include" />
+        <e p="ProduitORM.cs" t="Include" />
+        <e p="StockageORM.cs" t="Include" />
+        <e p="UtilisateurORM.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="Vue" t="Include">
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
