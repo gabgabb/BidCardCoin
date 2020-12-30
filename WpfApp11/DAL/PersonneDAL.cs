@@ -26,7 +26,7 @@ namespace WpfApp11
                 while (reader.Read())
                 {
                     PersonneDAO p = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), 
-                        reader.GetString(2),(DateTime)reader.GetDateTime(3), reader.GetString(4), 
+                        reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), 
                         reader.GetString(5), reader.GetString(6),reader.GetInt32(7));
                     l.Add(p);
                 }

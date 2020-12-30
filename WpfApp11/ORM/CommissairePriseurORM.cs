@@ -38,6 +38,7 @@ namespace WpfApp11
                     element.nomPersonneDAO, element.prenomPersonneDAO, element.dateNaisPersonneDAO, element.emailDAO,
                     element.passwordDAO, element.telephoneDAO, element.verifIdDAO, element.estVolontaireDAO,
                     element.formationDAO, element.verifFormationDAO);
+
                 per.Add(pe);
                 l.Add(p);
             }
@@ -48,10 +49,6 @@ namespace WpfApp11
 
         public static void updateCommissairePriseur(CommissairePriseurViewModel p)
         {
-            PersonneDAO.updatePersonne(new PersonneDAO(p.idPersonneProperty, p.nomPersonneProperty,
-                p.prenomPersonneProperty, p.DateNaisPersonneProperty, p.emailProperty, p.passwordProperty,
-                p.telephoneProperty, p.verifIdProperty));
-
             CommissairePriseurDAO.updateCommissairePriseur(new CommissairePriseurDAO(
                 p.idPersonneProperty, p.nomPersonneProperty, p.prenomPersonneProperty, p.DateNaisPersonneProperty,
                 p.emailProperty, p.passwordProperty, p.telephoneProperty, p.verifIdProperty, p.estVolontaireProperty,

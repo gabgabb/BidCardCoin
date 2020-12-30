@@ -73,7 +73,7 @@ public class UtilisateurViewModel : PersonneViewModel
 			this.PropertyChanged(this, new PropertyChangedEventArgs(info));
 			
 				UtilisateurORM.updateUtilisateur(this);
-				PersonneORM.updatePersonne(this);
+			
 		}
 	}
 }

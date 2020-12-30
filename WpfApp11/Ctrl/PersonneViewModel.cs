@@ -128,7 +128,7 @@ namespace WpfApp11
             {
                 handler(this, new PropertyChangedEventArgs(info));
                 this.PropertyChanged(this, new PropertyChangedEventArgs(info));
-                if (MainWindow.onglet != "ajouter")
+                if ((info != "AgeProperty") && MainWindow.onglet == "grille")
                 {
                     PersonneORM.updatePersonne(this);
                 }

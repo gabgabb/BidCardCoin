@@ -48,7 +48,7 @@
                                         ScrollViewer.CanContentScroll="True"
                                         ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                         ScrollViewer.VerticalScrollBarVisibility="Auto"
-                                        SelectionChanged="listeUtilisateur_SelectionChanged">
+                                        SelectionChanged="liste_SelectionChanged">
                                         <DataGrid.Columns>
                                             <DataGridTextColumn Binding="{Binding idPersonneUtilisateurProperty, Mode=TwoWay}" Header="id " />
                                             <DataGridTextColumn Binding="{Binding nomPersonneProperty, Mode=TwoWay}" Header="nom" />
@@ -187,7 +187,7 @@
                                         ScrollViewer.CanContentScroll="True"
                                         ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                         ScrollViewer.VerticalScrollBarVisibility="Auto"
-                                        SelectionChanged="listeUtilisateur_SelectionChanged">
+                                        SelectionChanged="liste_SelectionChanged">
                                         <DataGrid.Columns>
                                             <DataGridTextColumn Binding="{Binding idPersonneCpProperty, Mode=TwoWay}" Header="id " />
                                             <DataGridTextColumn Binding="{Binding nomPersonneProperty, Mode=TwoWay}" Header="nom" />
@@ -203,12 +203,7 @@
                                         </DataGrid.Columns>
                                     </DataGrid>
                                 </Grid>
-
                             </StackPanel>
-
-
-
-
                         </TabItem>
 
                         <TabItem Header="Ajouter un commissaire priseur">
@@ -250,7 +245,7 @@
                                         Name="txtAgeCp"
                                         Height="20"
                                         Margin="25,3,525,5"
-                                        Text="{Binding AgeProperty, Mode=TwoWay}"
+                                        Text="{Binding AgeProperty, Mode=OneWay}"
                                         TextChanged="AgeChanged" />
                                     <TextBox
                                         Name="txtEmailCp"
@@ -274,7 +269,7 @@
                                         Name="idBoolCp"
                                         Height="20"
                                         Margin="25,3,525,5"
-                                        Text="{Binding passwordProperty, Mode=TwoWay}"
+                                        Text="{Binding verifIdProperty, Mode=TwoWay}"
                                         TextChanged="VerifIdChanged" />
                                     <TextBox
                                         Name="volbool"

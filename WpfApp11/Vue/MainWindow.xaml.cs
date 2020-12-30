@@ -177,12 +177,17 @@ namespace WpfApp11
              myDateObjectCp.verifFormationProperty =  Convert.ToInt32(verifbool.Text);
          }
          
-         private void listeUtilisateur_SelectionChanged(object sender, SelectionChangedEventArgs e)
+         private void liste_SelectionChanged(object sender, SelectionChangedEventArgs e)
          {
              if ((listeUtilisateur.SelectedIndex < lu.Count) && (listeUtilisateur.SelectedIndex >= 0))
              {
                  selectedUtilisateurId = (lu.ElementAt<UtilisateurViewModel>(listeUtilisateur.SelectedIndex).idPersonneUtilisateurProperty);
              }
+
+             if((listeCPs.SelectedIndex<lcp.Count)&& (listeCPs.SelectedIndex >= 0))
+            {
+                selectedCpid = (lcp.ElementAt<CommissairePriseurViewModel>(listeCPs.SelectedIndex).idPersonneCpProperty);
+            }
          }
          
          private void CpButton_Click(object sender, RoutedEventArgs e)
@@ -214,8 +219,7 @@ namespace WpfApp11
              volbool.DataContext = myDateObjectCp;
              formationTxt.DataContext = myDateObjectCp;
              verifbool.DataContext = myDateObjectCp;
-             
-             
+           
          }
          
          void AppliquerContexteCp()
@@ -238,13 +242,15 @@ namespace WpfApp11
          {
              switch (OngletsUtilisateur.SelectedIndex)
              {
-                 case 0: onglet = "ajouter"; break;
-                 case 1: if(onglet!="grille") LoadUtilisateur(); onglet = "grille";  break;
-             }
+                
+                 case 0: if(onglet!="grille") LoadUtilisateur(); onglet = "grille";  break;
+                 case 1: onglet = "ajouter"; break;
+            }
              switch (OngletsCp.SelectedIndex)
              {
-                 case 0: onglet = "ajouter"; break;
-                 case 1: if(onglet!="grille") LoadCommissairePriseur(); onglet = "grille";  break;
+                case 0: if (onglet != "grille") LoadCommissairePriseur(); onglet = "grille"; break;
+                case 1: onglet = "ajouter"; break;
+                 
              }/*
              switch (OngletsProd.SelectedIndex)
              {
@@ -273,10 +279,6 @@ namespace WpfApp11
              listeUtilisateur.ItemsSource = lu; // bind de la liste avec la source, permettant le binding.
          }
          
-         private void nomPrenomButton_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
-         {
-             // On ne fait rien
-         }
          
          /*
          ////////////////////////////////////////////////////////////////
@@ -447,7 +449,7 @@ namespace WpfApp11
                 CommissairePriseurViewModel toRemove = (CommissairePriseurViewModel)listeCPs.SelectedItem;
                 lcp.Remove(toRemove);
                 listeCPs.Items.Refresh();
-                CommissairePriseurORM.supprimerCommissairePriseur(selectedCategorieId);
+                CommissairePriseurORM.supprimerCommissairePriseur(selectedCpid);
             }
             /*
             if(listeCats.SelectedItem is ProduitViewModel)
@@ -457,6 +459,11 @@ namespace WpfApp11
                 listeCats.Items.Refresh();
                 ProduitORM.supprimerProduit(selectedProduitId);
             }*/
+        }
+
+        private void nomPrenomButton_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
         }
 
     }
